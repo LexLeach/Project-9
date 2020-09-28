@@ -76,7 +76,6 @@ You will be propmted with a selection as you see above in a scene cap and below 
 ###### [Overview](#overview)
 
 ```
-
 Please select an option:
 
 (L)ist Bookmarks #Will list all current bookmarks in the database
@@ -88,7 +87,6 @@ Please select an option:
 (E)xit App #Exits the app
 
 Enter a Choice:  #Is where you enter your choice
-
 ```
 
 Simply type the letter to the corrisponding function you want to run. (I added a few bookmarks for presentation purposes and for the readme
