@@ -103,7 +103,7 @@ Pressing F will prompt you with a question: ‘What is the name of the Bookmark 
 
 ![](assets/550286D1160FA5296827D8858DB5193B.jpg)
 
-As an example I have enter Google and the response was as follows (Also note, after the response, it will return you to the options list)
+As an example I have entered Google and the response was as follows (Also note, after the response, it will return you to the options list)
 
 ![](assets/46DEF5995906E9D622896E3142B6A341.jpg)
 
