@@ -197,7 +197,7 @@ class  Bookmark(BaseModel):
 	date_added =  DateField()
 ```
 
-I also included a drop and create tables function on each run of the app for testing purposes (this will be removed for presentation)
+I also included a drop and create tables function on each run of the app
 
 ```python
 db.drop_tables([Bookmark]);
