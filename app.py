@@ -65,4 +65,31 @@ def find_Bookmark():
 
     Bookmark_List()
 
+def update_Bookmark():
+    find = input('What is the name of the Bookmark you wish to Update?: \n')
+    find_bookmark = Bookmark.select().where(Bookmark.name == find).get()
+
+    update = input('Which field do you wish to update? name or url: \n')
+    if update == 'name':
+        new_name = input(f'What is the new name you wish to give {find}? (◔_◔): \n')
+        find_bookmark.name = new_name
+        find_bookmark.save()
+        print('====ヽ(｀Д´)⊃━☆ﾟ. * ･ ｡ﾟ,====')
+        print(f'Name: {find_bookmark.name} \n Link: {find_bookmark.link} \n Date Added: {find_bookmark.date_added}')
+        print('==========(☝ ՞ਊ ՞)☝==========')
+        print(f'{find} has successfully been updated to {new_name}! (•_•) ( •_•)>⌐■-■ (⌐■_■)')
+        Bookmark_List()
+    
+    elif update == 'url' or update == 'URL':
+        new_url = input(f'What is the new URL you wish to give {find}? (◔_◔): \n')
+        find_bookmark.link = new_url
+        find_bookmark.save()
+        print('====ヽ(｀Д´)⊃━☆ﾟ. * ･ ｡ﾟ,====')
+        print(f'Name: {find_bookmark.name} \n Link: {find_bookmark.link} \n Date Added: {find_bookmark.date_added}')
+        print('==========(☝ ՞ਊ ՞)☝===========')
+        print(f"{find}'s URL has successfully been updated to {new_url}! (•_•) ( •_•)>⌐■-■ (⌐■_■)")
+        Bookmark_List()
+    else:
+        Bookmark_List()
+
 Bookmark_List()
