@@ -49,4 +49,20 @@ def list_Bookmarks():
 
     Bookmark_List()
 
+def find_Bookmark():
+    try:
+        find = input('What is the name of the Bookmark you wish to find? ԅ(≖‿≖ԅ): \n')
+        find_bookmark = Bookmark.select().where(Bookmark.name == find)
+
+        for bookmark in find_bookmark:
+            print('==========༼ つ ◕_◕ ༽つ=========')
+            print('=======You Has Bookmark========')
+            print(f'Name: {bookmark.name} \n Link: {bookmark.link} \n Date Added: {bookmark.date_added}')
+            print('==============================')
+    except:
+        print('No Bookmark found with that name.')
+        Bookmark_List()
+
+    Bookmark_List()
+
 Bookmark_List()
