@@ -3,8 +3,6 @@ import datetime
 
 db = PostgresqlDatabase('Bookmarks', user='lexleach', password='', host='localhost', port=5432)
 
-db.connect()
-
 class BaseModel(Model):
     class Meta:
         database = db
@@ -14,6 +12,7 @@ class Bookmark(BaseModel):
     link = CharField()
     date_added = DateField()
 
+db.connect()
 db.drop_tables([Bookmark])
 db.create_tables([Bookmark])
 
@@ -22,3 +21,21 @@ reddit = Bookmark(name='Reddit', link='https://www.reddit.com', date_added=datet
 steam = Bookmark(name='Steam', link='https://store.steampowered.com/', date_added=datetime.datetime.now()).save()
 humble_bundle = Bookmark(name='Humble Bundle', link='https://www.humblebundle.com/', date_added=datetime.datetime.now()).save()
 
+def Bookmark_List():
+    print('Please select an option: \n (L)ist Bookmarks \n (F)ind Bookmark \n (C)reate a Bookmark \n (U)pdate a Bookmark \n (E)xit App')
+
+    choice = str(input('Enter a Choice: '))
+
+    if choice == 'L' or choice == 'l':
+        list_Bookmarks()
+    elif choice == 'F' or choice == 'f':
+        find_Bookmark()
+    elif choice == 'C' or choice == 'c':
+        create_Bookmark()
+    elif choice == 'U' or choice == 'u':
+        update_Bookmark()
+    else:
+        print('Goodbye! (◞థ౪థ)ᴖ')
+        exit()
+
+Bookmark_List()
