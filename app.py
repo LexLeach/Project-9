@@ -1,26 +1,30 @@
+#Imports ALL of peewee
 from peewee import *
+#imports date function
 import datetime
-
+#Database connection
 db = PostgresqlDatabase('Bookmarks', user='lexleach', password='', host='localhost', port=5432)
-
+#Database Base model
 class BaseModel(Model):
     class Meta:
         database = db
-
+#Database Schema
 class Bookmark(BaseModel):
     name = CharField()
     link = CharField()
     date_added = DateField()
-
+#starts connection to database
 db.connect()
+#Drops tables in Bookmark
 db.drop_tables([Bookmark])
+#Creates new tables in Bookmark
 db.create_tables([Bookmark])
-
+#Variable to add bookmarks
 google = Bookmark(name='Google', link='https://www.google.com', date_added=datetime.datetime.now()).save()
 reddit = Bookmark(name='Reddit', link='https://www.reddit.com', date_added=datetime.datetime.now()).save()
 steam = Bookmark(name='Steam', link='https://store.steampowered.com/', date_added=datetime.datetime.now()).save()
 humble_bundle = Bookmark(name='Humble Bundle', link='https://www.humblebundle.com/', date_added=datetime.datetime.now()).save()
-
+#Function to list App options
 def Bookmark_List():
     print('Please select an option: \n (L)ist Bookmarks \n (F)ind Bookmark \n (C)reate a Bookmark \n (U)pdate a Bookmark \n (E)xit App')
 
@@ -37,7 +41,7 @@ def Bookmark_List():
     else:
         print('Goodbye! (◞థ౪థ)ᴖ')
         exit()
-
+#Function to list current bookmarks in the database
 def list_Bookmarks():
     bookmarks = Bookmark.select()
     print('==========༼ つ ◕_◕ ༽つ=========')
@@ -48,7 +52,7 @@ def list_Bookmarks():
         print('===========================')
 
     Bookmark_List()
-
+#Function to find a bookmark by name
 def find_Bookmark():
     try:
         find = input('What is the name of the Bookmark you wish to find? ԅ(≖‿≖ԅ): \n')
@@ -64,7 +68,7 @@ def find_Bookmark():
         Bookmark_List()
 
     Bookmark_List()
-
+#Function to create a new bookmark
 def create_Bookmark():
     new_name = input('What would you like to name the Bookmark?: \n' )
 
@@ -82,7 +86,7 @@ def create_Bookmark():
         print('===========================')
 
     Bookmark_List()
-
+#Function to update a bookmark current in the database
 def update_Bookmark():
     find = input('What is the name of the Bookmark you wish to Update?: \n')
     find_bookmark = Bookmark.select().where(Bookmark.name == find).get()
@@ -109,5 +113,5 @@ def update_Bookmark():
         Bookmark_List()
     else:
         Bookmark_List()
-
+#Function call for Bookmark_List
 Bookmark_List()
