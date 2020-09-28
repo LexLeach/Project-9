@@ -65,6 +65,24 @@ def find_Bookmark():
 
     Bookmark_List()
 
+def create_Bookmark():
+    new_name = input('What would you like to name the Bookmark?: \n' )
+
+    new_link = input('Paste or type the URL to the new Bookmark: \n')
+
+    add_bookmark = Bookmark(name=new_name, link=new_link, date_added=datetime.datetime.now()).save()
+
+    find_bookmark = Bookmark.select().where(Bookmark.name == new_name)
+
+    print('Bookmark successfully added!')
+
+    for bookmark in find_bookmark:
+        print('===========================')
+        print(f'Name: {bookmark.name} \n Link: {bookmark.link} \n Date Added: {bookmark.date_added}')
+        print('===========================')
+
+    Bookmark_List()
+
 def update_Bookmark():
     find = input('What is the name of the Bookmark you wish to Update?: \n')
     find_bookmark = Bookmark.select().where(Bookmark.name == find).get()
