@@ -38,4 +38,15 @@ def Bookmark_List():
         print('Goodbye! (◞థ౪థ)ᴖ')
         exit()
 
+def list_Bookmarks():
+    bookmarks = Bookmark.select()
+    print('==========༼ つ ◕_◕ ༽つ=========')
+    print('======You Has Bookmarks=======')
+    for bookmark in bookmarks:
+        print('===========================')
+        print(f'Name: {bookmark.name} \n Link: {bookmark.link} \n Date Added {bookmark.date_added}')
+        print('===========================')
+
+    Bookmark_List()
+
 Bookmark_List()
