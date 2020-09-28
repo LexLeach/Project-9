@@ -61,13 +61,13 @@ In the project directory
 
 `pipenv shell`
 
-![](resources/7034E4A31DE69754008B6D515B283E78.jpg)
+![](assets/7034E4A31DE69754008B6D515B283E78.jpg)
 
 2\. Then run the app with the follow command
 
 `python app.py`
 
-![](resources/6902E77B2754926E3AE124AA18CCFE53.jpg)
+![](assets/6902E77B2754926E3AE124AA18CCFE53.jpg)
 
 You will be propmted with a selection as you see above in a scene cap and below in text format
 
@@ -97,17 +97,17 @@ Simply type the letter to the corrisponding function you want to run. (I added a
 
 Pressing L and then enter will display the Bookmarks
 
-![](resources/7D9AD91BE7A513BD9F4A77611EE6B2E5.jpg)
+![](assets/7D9AD91BE7A513BD9F4A77611EE6B2E5.jpg)
 
 #### F
 
 Pressing F will prompt you with a question: ‘What is the name of the Bookmark you wish to find?:'
 
-![](resources/550286D1160FA5296827D8858DB5193B.jpg)
+![](assets/550286D1160FA5296827D8858DB5193B.jpg)
 
 As an example I have enter Google and the response was as follows (Also note, after the response, it will return you to the options list)
 
-![](resources/46DEF5995906E9D622896E3142B6A341.jpg)
+![](assets/46DEF5995906E9D622896E3142B6A341.jpg)
 
 If the name you enter does not exist then it will return you to the options list by default
 
@@ -117,15 +117,15 @@ Pressing C will allow you to create a new Bookmark and add it to the database
 
 First it will ask you what you want to name the bookmark
 
-![](resources/B1845F354171F50BAF638607A0290C3F.jpg)
+![](assets/B1845F354171F50BAF638607A0290C3F.jpg)
 
 Next it will ask you to paste or type in the url for the bookmark
 
-![](resources/7CCEB6D85D6284D8A1E107CBEBAAFA49.jpg)
+![](assets/7CCEB6D85D6284D8A1E107CBEBAAFA49.jpg)
 
 This time when you press enter, it will tell you the bookmark was successfully added and return the newly added Bookmark and send you back to the options screen.
 
-![](resources/409B34C4C88061F1410674AF0866F202.jpg)
+![](assets/409B34C4C88061F1410674AF0866F202.jpg)
 
 #### U
 
@@ -133,25 +133,25 @@ Pressing U will allow you to update an existing Bookmark
 
 First it will ask you for the name of the bookmark you wish to update
 
-![](resources/50A4B7B6BAAF0C34D818D737394C572B.jpg)
+![](assets/50A4B7B6BAAF0C34D818D737394C572B.jpg)
 
 Then it will ask you if you want to update the name or url. You can do this by typing ‘name’ or ‘url'
 
-![](resources/596527F245C15786CCF260489AF14260.jpg)
+![](assets/596527F245C15786CCF260489AF14260.jpg)
 
 When you press enter, it will ask what you want the new name or url to be
 
-![](resources/26492701ED10C19124B3E93944F7B8F9.jpg)
+![](assets/26492701ED10C19124B3E93944F7B8F9.jpg)
 
 Again, when you press enter it will return the updated Bookmark and let you know it was updated successfully and send you back to the options list
 
-![](resources/B531FEF6FE2C3D9691F0396BA72BB3E5.jpg)
+![](assets/B531FEF6FE2C3D9691F0396BA72BB3E5.jpg)
 
 #### E
 
 And of course, press E then enter will exit the app (Well, pressing anything other than the keys listed and pressing enter will exit the app)
 
-![](resources/8396ED3AD7AE9789351F3A12E72237E0.jpg)
+![](assets/8396ED3AD7AE9789351F3A12E72237E0.jpg)
 
 ### Code Walkthrough
 
